@@ -408,6 +408,29 @@ pTSqrOnmqmUUnopqmvummmmmmUUnopqmvummmmmmUUA1jJ
       <version>${slf4j.version}</version>
       <scope>compile</scope>
     </dependency>
+
+	  <dependency>
+		  <groupId>org.jasig.cas</groupId>
+		  <artifactId>cas-server-support-jdbc</artifactId>
+		  <version>${project.version}</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>commons-dbcp</groupId>
+		  <artifactId>commons-dbcp</artifactId>
+		  <version>1.4</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>net.sourceforge.jtds</groupId>
+		  <artifactId>jtds</artifactId>
+		  <version>1.2.4</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>javax.mail</groupId>
+		  <artifactId>mail</artifactId>
+		  <version>1.4.1</version>
+	  </dependency>
+
   </dependencies>
 
   <repositories>
