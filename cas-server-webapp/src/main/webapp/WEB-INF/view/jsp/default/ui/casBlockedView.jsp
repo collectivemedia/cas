@@ -33,11 +33,10 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Logout">
-	<div id="msg" class="success">
-		<h3><spring:message code="screen.logout.header" /></h3>
+<collective_ui:template title="Blocked">
+	<div id="msg" class="errors">
+		<h3><spring:message code="screen.blocked.header" /></h3>
 		<div class="divider"></div>
-		<p><spring:message code="screen.logout.success" /></p>
-		<p><spring:message code="screen.logout.security" /></p>
+		<p><spring:message code="screen.blocked.message" /></p>
 	</div>
 </collective_ui:template>

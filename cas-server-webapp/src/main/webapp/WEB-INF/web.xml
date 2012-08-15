@@ -107,13 +107,28 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
-	
-  <servlet-mapping>
-    <servlet-name>cas</servlet-name>
-    <url-pattern>/login</url-pattern>
-  </servlet-mapping>
 
-  <servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cas</servlet-name>
+		<url-pattern>/health</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>cas</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>cas</servlet-name>
+		<url-pattern>/forgot</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>cas</servlet-name>
+		<url-pattern>/new</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
     <servlet-name>cas</servlet-name>
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>

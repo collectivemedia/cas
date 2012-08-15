@@ -125,6 +125,13 @@
 					class="org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler" />
 			</list>
 		</property>
+
+		<property name="authenticationMetaDataPopulators">
+			<list>
+				<bean class="org.jasig.cas.authentication.principal.RememberMeAuthenticationMetaDataPopulator" />
+			</list>
+		</property>
+
 	</bean>
 
 

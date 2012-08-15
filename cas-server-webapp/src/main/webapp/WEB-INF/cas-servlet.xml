@@ -73,7 +73,10 @@
       class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
     <property name="mappings">
       <props>
-        <prop key="/logout">logoutController</prop>
+	    <prop key="/health">healthController</prop>
+	    <prop key="/forgot">forgotPassordController</prop>
+	    <prop key="/new">requestAccountController</prop>
+	    <prop key="/logout">logoutController</prop>
         <prop key="/serviceValidate">serviceValidateController</prop>
         <prop key="/validate">legacyValidateController</prop>
         <prop key="/proxy">proxyController</prop>
@@ -190,7 +193,8 @@
         p:centralAuthenticationService-ref="centralAuthenticationService"
         p:logoutView="casLogoutView"
         p:warnCookieGenerator-ref="warnCookieGenerator"
-        p:ticketGrantingTicketCookieGenerator-ref="ticketGrantingTicketCookieGenerator"/>
+        p:ticketGrantingTicketCookieGenerator-ref="ticketGrantingTicketCookieGenerator"
+        p:followServiceRedirects="true"/>
 
   <bean id="healthCheckController" class="org.jasig.cas.web.HealthCheckController"
         p:healthCheckMonitor-ref="healthCheckMonitor"/>
@@ -202,9 +206,10 @@
 
   <bean id="authenticationViaFormAction" class="org.jasig.cas.web.flow.AuthenticationViaFormAction"
         p:centralAuthenticationService-ref="centralAuthenticationService"
-        p:warnCookieGenerator-ref="warnCookieGenerator"/>
+        p:warnCookieGenerator-ref="warnCookieGenerator"
+        p:credentialsBinder-ref="trimmingCredentialsBinder"/>
 
-  <bean id="generateServiceTicketAction" class="org.jasig.cas.web.flow.GenerateServiceTicketAction"
+	<bean id="generateServiceTicketAction" class="org.jasig.cas.web.flow.GenerateServiceTicketAction"
         p:centralAuthenticationService-ref="centralAuthenticationService"/>
 
   <bean id="sendTicketGrantingTicketAction" class="org.jasig.cas.web.flow.SendTicketGrantingTicketAction"
@@ -253,4 +258,25 @@
 
   <bean id="credentialsValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"
         p:messageInterpolator-ref="messageInterpolator"/>
+
+  <bean id="healthController" class="org.jasig.cas.web.HealthController"/>
+
+  <bean id="forgotPassordController" class="org.jasig.cas.web.ForgotPasswordController"
+	      p:forgotView="default/ui/casForgotView"
+	      p:dataSource-ref="maindb"
+	      p:mailSender-ref="mailSender"/>
+
+  <bean id="requestAccountController" class="org.jasig.cas.web.RequestAccountController"
+	      p:requestView="default/ui/casRequestView"
+	      p:mailSender-ref="mailSender"/>
+
+  <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"
+	      p:host="${mail.host}"
+	      p:port="${mail.port}"
+	      p:username="${mail.username}"
+	      p:password="${mail.password}"
+	      p:protocol="smtps"/>
+
+  <bean id="trimmingCredentialsBinder" class="org.jasig.cas.web.bind.TrimmingCredentialsBinder"/>
+
 </beans>
