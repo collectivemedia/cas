@@ -1,0 +1,83 @@
+.navbar {
+	color: white;
+}
+
+.navbar-inner {
+	margin-top: 20px;
+	background-color: #007AC9;
+	background-image: -moz-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: -ms-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#007AC9), to(#5CB9E5));
+	background-image: -webkit-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: -o-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: linear-gradient(top, #007AC9, #5CB9E5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#007AC9', endColorstr = '#5CB9E5', GradientType = 0);
+}
+
+.btn-navbar {
+	background-color: #007AC9;
+	background-image: -moz-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: -ms-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#007AC9), to(#5CB9E5));
+	background-image: -webkit-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: -o-linear-gradient(top, #007AC9, #5CB9E5);
+	background-image: linear-gradient(top, #007AC9, #5CB9E5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#007AC9', endColorstr = '#5CB9E5', GradientType = 0);
+	border-color: #5CB9E5 #5CB9E5 #007AC9;
+}
+
+.navbar .nav > li > a {
+	color: white;
+}
+
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+	text-decoration: none;
+	background-color: #0d63a8;
+}
+
+.navbar-search .search-query {
+	background-color: white;
+	border: 1px solid #CCC;
+	color: black;
+}
+
+.btn-navbar:hover, .btn-navbar:active, .btn-navbar.active, .btn-navbar.disabled, .btn-navbar[disabled] {
+	background-color: #5CB9E5;
+}
+
+@media (max-width: 979px) {
+	.navbar-inner {
+		padding: 5px;
+	}
+
+	.btn-navbar {
+		display: block;
+	}
+
+	.navbar .nav > li > a, .navbar .dropdown-menu a {
+		color: white;
+	}
+
+	.navbar .nav > li > a:hover, .navbar .dropdown-menu a:hover {
+		background-color: #5CB9E5;
+	}
+
+	.navbar .nav > li > a:hover, .navbar .dropdown-menu a:hover {
+		background-color: #5CB9E5;
+	}
+
+	.navbar-form, .navbar-search {
+		border-top: 1px solid #0D63A8;
+		border-bottom: 1px solid #0D63A8;
+	}
+
+	input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
+		display: inline-block;
+	}
+}
+
+@media (max-width: 767px) {
+	input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
+		display: inline-block;
+	}
+}
