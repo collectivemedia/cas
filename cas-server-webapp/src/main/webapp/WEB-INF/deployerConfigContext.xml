@@ -218,4 +218,16 @@
       </list>
     </property>
   </bean>
+
+	<bean id="maindb" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName:com.mysql.jdbc.Driver}"/>
+		<property name="url" value="${jdbc.url:http://localhost:3306/db}"/>
+		<property name="maxActive" value="${jdbc.maxActive:10}"/>
+		<property name="maxIdle" value="${jdbc.maxIdle:10}"/>
+		<property name="initialSize" value="${jdbc.initialSize:10}"/>
+		<property name="validationQuery" value="${jdbc.validationQuery:SELECT 0}"/>
+		<property name="username" value="${jdbc.username:db}"/>
+		<property name="password" value="${jdbc.password:db}"/>
+	</bean>
+
 </beans>

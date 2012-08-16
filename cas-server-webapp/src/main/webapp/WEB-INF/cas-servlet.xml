@@ -271,10 +271,10 @@
 	      p:mailSender-ref="mailSender"/>
 
   <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"
-	      p:host="${mail.host}"
-	      p:port="${mail.port}"
-	      p:username="${mail.username}"
-	      p:password="${mail.password}"
+	      p:host="${mail.host:localhost}"
+	      p:port="${mail.port:23}"
+	      p:username="${mail.username:test}"
+	      p:password="${mail.password:test}"
 	      p:protocol="smtps"/>
 
   <bean id="trimmingCredentialsBinder" class="org.jasig.cas.web.bind.TrimmingCredentialsBinder"/>

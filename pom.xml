@@ -523,7 +523,8 @@ pTSqrOnmqmUUnopqmvummmmmmUUnopqmvummmmmmUUA1jJ
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-annotations</artifactId>
-        <version>${hibernate.core.version}</version>
+        <!--<version>${hibernate.core.version}</version>-->
+	    <version>3.5.6-Final</version>
         <scope>compile</scope>
         <type>jar</type>
       </dependency>
