@@ -68,9 +68,7 @@
 			<c:if test="${empty sessionScope.openIdLocalId}">
 				<spring:message code="screen.welcome.label.netid.accesskey" var="userNameAccessKey"/>
 				<form:input cssClass="input-large" cssErrorClass="input-large error" id="username" size="25"
-				            tabindex="1"
-				            accesskey="${userNameAccessKey}" path="username" autocomplete="false"
-				            htmlEscape="true"/>
+				            tabindex="1" accesskey="${userNameAccessKey}" path="username" htmlEscape="true"/>
 			</c:if>
 		</div>
 		<div class="group">
@@ -83,7 +81,7 @@
 				  --%>
 			<spring:message code="screen.welcome.label.password.accesskey" var="passwordAccessKey"/>
 			<form:password cssClass="input-large" cssErrorClass="input-large error" id="password" size="25" tabindex="2"
-			               path="password" accesskey="${passwordAccessKey}" htmlEscape="true" autocomplete="off"/>
+			               path="password" accesskey="${passwordAccessKey}" htmlEscape="true"/>
 		</div>
 
 		<div class="group">
