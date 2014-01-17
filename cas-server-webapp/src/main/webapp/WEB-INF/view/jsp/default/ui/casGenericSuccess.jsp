@@ -33,7 +33,7 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Success">
+<collective_ui:template title="Success" service="${service}">
 	<div id="msg" class="success">
 		<h3><spring:message code="screen.success.header" /></h3>
 		<div class="divider"></div>

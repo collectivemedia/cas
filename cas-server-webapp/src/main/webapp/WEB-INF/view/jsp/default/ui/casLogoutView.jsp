@@ -33,7 +33,7 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Logout">
+<collective_ui:template title="Logout" service="${service}">
 	<div id="msg" class="success">
 		<h3><spring:message code="screen.logout.header" /></h3>
 		<div class="divider"></div>
