@@ -33,7 +33,7 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Error">
+<collective_ui:template title="Error" service="${service}">
 	<div id="msg" class="errors">
 		<h3><spring:message code="screen.service.error.header" /></h3>
 		<div class="divider"></div>

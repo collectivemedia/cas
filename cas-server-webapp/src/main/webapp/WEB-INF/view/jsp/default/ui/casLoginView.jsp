@@ -34,19 +34,7 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Login">
-	<div class="title">
-		<c:choose>
-			<c:when test="${not empty service and fn:containsIgnoreCase(service, 'sales')}">
-				<h3>Advertising Demos</h3>
-			</c:when>
-			<c:otherwise>
-				<h3>Log in to Ensemble</h3>
-			</c:otherwise>
-		</c:choose>
-		<img src="<c:url value="/images/icon_lock.png"/>" class="lock">
-	</div>
-	<div class="divider"></div>
+<collective_ui:template title="RM Sign In" service="${service}">
 	<form:form method="post" id="fm1" cssClass="fm-v clearfix" commandName="${commandName}" htmlEscape="true">
 		<spring:hasBindErrors name="${commandName}">
 			<div id="error" class="alert alert-error">
@@ -59,7 +47,7 @@
 		<div class="fan"></div>
 
 		<div class="group">
-			<label for="username" class="fl-label"><spring:message code="screen.welcome.label.netid"/></label>
+			<label for="username" class="fl-label">Username:</label>
 			<c:if test="${not empty sessionScope.openIdLocalId}">
 				<strong>${sessionScope.openIdLocalId}</strong>
 				<input type="hidden" id="username" name="username" value="${sessionScope.openIdLocalId}"/>
@@ -72,7 +60,7 @@
 			</c:if>
 		</div>
 		<div class="group">
-			<label for="password" class="fl-label"><spring:message code="screen.welcome.label.password"/></label>
+			<label for="password" class="fl-label">Password:</label>
 				<%--
 				  NOTE: Certain browsers will offer the option of caching passwords for a user.  There is a non-standard attribute,
 				  "autocomplete" that when set to "off" will tell certain browsers not to prompt to cache credentials.  For more
@@ -96,15 +84,13 @@
 			<input type="hidden" name="_eventId" value="submit"/>
 
 			<c:choose>
-				<c:when test="${not empty service and (fn:containsIgnoreCase(service, 'sales') or fn:containsIgnoreCase(service, 'advertisingdemos'))}">
-					<input id="submit" class="btn btn-inverse" name="submit" accesskey="l"
-					       value="<spring:message code="screen.welcome.button.login" />"
-					       tabindex="4" type="submit" disabled="disabled"/>
+				<c:when test="${fn:containsIgnoreCase(service, 'sales') or fn:containsIgnoreCase(service, 'advertisingdemos')}">
+					<input id="submit" class="btn btn-inverse btn-large" name="submit" accesskey="l"
+					       value="Sign In" tabindex="4" type="submit" disabled="disabled"/>
 				</c:when>
 				<c:otherwise>
-					<input id="submit" class="btn btn-primary" name="submit" accesskey="l"
-					       value="<spring:message code="screen.welcome.button.login" />"
-					       tabindex="4" type="submit" disabled="disabled"/>
+					<input id="submit" class="btn btn-primary btn-large" name="submit" accesskey="l"
+					       value="Sign In" tabindex="4" type="submit" disabled="disabled"/>
 				</c:otherwise>
 			</c:choose>
 		</div>

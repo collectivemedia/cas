@@ -33,7 +33,7 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Confirm">
+<collective_ui:template title="Confirm" service="${service}">
 	<div class="info">
 		<p><spring:message code="screen.confirmation.message" arguments="${fn:escapeXml(param.service)}${fn:indexOf(param.service, '?') eq -1 ? '?' : '&'}ticket=${serviceTicketId}" /></p>
 	</div>

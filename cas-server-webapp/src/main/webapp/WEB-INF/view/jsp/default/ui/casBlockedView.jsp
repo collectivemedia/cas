@@ -33,7 +33,7 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Blocked">
+<collective_ui:template title="Blocked" service="${service}">
 	<div id="msg" class="errors">
 		<h3><spring:message code="screen.blocked.header" /></h3>
 		<div class="divider"></div>

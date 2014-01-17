@@ -34,8 +34,8 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Password Reminder">
-	<h3>Password Reminder</h3>
+<collective_ui:template title="Forgot RM Password?" service="${service}">
+	<h3>Forgot Password?</h3>
 
 	<div class="divider"></div>
 	<form method="post" id="fm1" style="min-height: 172px">
@@ -49,12 +49,7 @@
 		<div class="fan fan-forgot"></div>
 		<div class="group">
 			<label for="email" class="fl-label">Email:</label>
-
-			<div class="input-append">
-				<input type="text" id="email" name="email" class="input-large" tabindex="1"
-				       placeholder="Required"/><span class="add-on"><i class="icon-asterisk"
-				                                                       title="Required"></i></span>
-			</div>
+            <input type="email" id="email" name="email" class="input-large" tabindex="1" placeholder="Required"/>
 		</div>
 		<div class="group">
 			<c:choose>
@@ -67,7 +62,7 @@
 					       tabindex="2" type="submit" disabled="disabled"/>
 				</c:otherwise>
 			</c:choose>
-			<input class="btn" name="cancel" accesskey="l" value="Cancel" tabindex="3" type="submit"/>
+			<input class="btn" name="cancel" accesskey="l" value="Cancel" tabindex="3" type="submit" formnovalidate/>
 		</div>
 	</form>
 	<div class="divider"></div>

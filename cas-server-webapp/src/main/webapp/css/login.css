@@ -1,27 +1,36 @@
 body {
 	background-image: url('../images/bg_login.png');
+    padding: 0 10px;
 }
 
 .logo {
 	margin-top: 20px;
-	margin-bottom: 10px;
 }
 
 .content {
-	width: 335px;
+	width: 285px;
+    margin: 0 auto;
 }
 
 .login-form {
-	background: url('../images/bg_login_body.png') no-repeat bottom left;
-	padding: 1px 40px;
+	padding: 25px 30px 15px 30px;
 	min-height: 250px;
+    border-radius: 10px;
+    border: 1px solid #BBB;
+    background: #e5e8ea; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e5e8ea 0%, #ffffff 15%, #ffffff 30%, #e5e8ea 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e8ea), color-stop(15%,#ffffff), color-stop(30%,#ffffff), color-stop(100%,#e5e8ea)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e5e8ea 0%,#ffffff 15%,#ffffff 30%,#e5e8ea 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e5e8ea 0%,#ffffff 15%,#ffffff 30%,#e5e8ea 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e5e8ea 0%,#ffffff 15%,#ffffff 30%,#e5e8ea 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e5e8ea 0%,#ffffff 15%,#ffffff 30%,#e5e8ea 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e8ea', endColorstr='#e5e8ea',GradientType=0 ); /* IE6-9 */
 }
 
 h2, h3 {
 	color: #0067ab;
 	font-weight: 500;
 	letter-spacing: -1px;
-	margin-top: 7px;
 }
 
 .login-form .title h3 {
@@ -45,7 +54,11 @@ h2, h3 {
 }
 
 .login-form .group {
-	margin-bottom: 16px;
+	margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 213px;
 }
 
 input.error {

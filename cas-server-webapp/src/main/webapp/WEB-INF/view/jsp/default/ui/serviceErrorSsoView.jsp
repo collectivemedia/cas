@@ -33,7 +33,7 @@
 
 <fmt:setLocale value="en_US"/>
 
-<collective_ui:template title="Error">
+<collective_ui:template title="Error" service="${service}">
 	<c:url var="url" value="/login">
 	    <c:param name="service" value="${param.service}" />
 	    <c:param name="renew" value="true" />

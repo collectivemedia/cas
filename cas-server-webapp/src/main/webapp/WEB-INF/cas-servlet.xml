@@ -90,7 +90,7 @@
         <prop key="/openid/*">openIdProviderController</prop>
         <prop key="/authorizationFailure.html">passThroughController</prop>
         <prop key="/403.html">passThroughController</prop>
-        <prop key="/status">healthCheckController</prop>
+        <!--<prop key="/status">healthCheckController</prop>-->
       </props>
     </property>
     <property
@@ -196,8 +196,8 @@
         p:ticketGrantingTicketCookieGenerator-ref="ticketGrantingTicketCookieGenerator"
         p:followServiceRedirects="true"/>
 
-  <bean id="healthCheckController" class="org.jasig.cas.web.HealthCheckController"
-        p:healthCheckMonitor-ref="healthCheckMonitor"/>
+  <!--<bean id="healthCheckController" class="org.jasig.cas.web.HealthCheckController"-->
+        <!--p:healthCheckMonitor-ref="healthCheckMonitor"/>-->
 
   <bean id="initialFlowSetupAction" class="org.jasig.cas.web.flow.InitialFlowSetupAction"
         p:argumentExtractors-ref="argumentExtractors"
