@@ -4,18 +4,11 @@ body {
 
 .logo {
 	margin: 0;
-	height: 100px;
-}
-
-.content {
-	width: 335px;
+	height: 70px;
 }
 
 .login-form {
-	background: url('../images/bg_login_body.png') no-repeat bottom left;
-	padding: 1px 40px;
-	min-height: 250px;
-	position: relative;
+    position: relative;
 }
 
 .group {
@@ -28,9 +21,10 @@ body {
 	position: absolute;
 	width: 126px;
 	height: 126px;
-	bottom: 44px;
+	bottom: 52px;
 	right: 0;
 	z-index: 0;
+    background-size: contain;
 }
 
 .fan-request, .fan-forgot {
@@ -40,7 +34,6 @@ body {
 h2, h3 {
 	color: #333;
 	font-weight: bold;
-	margin-top: 7px;
 }
 
 .login-form .title h3 {
@@ -49,30 +42,6 @@ h2, h3 {
 
 .login-form .title .lock {
 	visibility: hidden;
-}
-
-.divider {
-	height: 1px;
-	margin: 8px 1px;
-	overflow: hidden;
-	background-color: #E5E5E5;
-	border-bottom: 1px solid white;
-}
-
-#fm1 {
-	margin: 0;
-}
-
-.login-form .group {
-	margin-bottom: 16px;
-}
-
-input.error {
-	border-color: #B94A48;
-}
-
-.footer {
-	font-size: 11px;
 }
 
 a:hover {
