@@ -91,10 +91,8 @@
                     +-->
                 <!--<bean-->
                 <!--class="org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler" />-->
-                <bean class="org.jasig.cas.adaptors.jdbc.QueryDatabaseAuthenticationHandler">
-                    <property name="dataSource" ref="oggiSettings"/>
-                    <property name="sql" value="SELECT [password] FROM [User] WHERE [Login] = ?"/>
-                </bean>
+                <bean class="org.jasig.cas.authentication.handler.UserManagementAuthenticationHandler"
+                      p:userManagementClient-ref="userManagementClient"/>
             </list>
         </property>
 
@@ -181,15 +179,10 @@
 
     <bean id="auditTrailManager" class="com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager" />
 
-    <bean id="oggiSettings" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${jdbc.driverClassName}"/>
-        <property name="url" value="${jdbc.url}"/>
-        <property name="maxActive" value="${jdbc.maxActive}"/>
-        <property name="maxIdle" value="${jdbc.maxIdle}"/>
-        <property name="initialSize" value="${jdbc.initialSize}"/>
-        <property name="validationQuery" value="${jdbc.validationQuery}"/>
-        <property name="username" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-    </bean>
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+
+    <bean id="userManagementClient" class="org.jasig.cas.authentication.client.UserManagementClient"
+          p:restTemplate-ref="restTemplate"
+          p:userManagementBaseUrl="${userManagement.url}"/>
 
 </beans>

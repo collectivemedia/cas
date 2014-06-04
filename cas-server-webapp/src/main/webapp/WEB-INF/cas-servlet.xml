@@ -263,7 +263,6 @@
 
   <bean id="forgotPassordController" class="org.jasig.cas.web.ForgotPasswordController"
 	      p:forgotView="default/ui/casForgotView"
-	      p:dataSource-ref="oggiSettings"
 	      p:mailSender-ref="mailSender"/>
 
   <bean id="requestAccountController" class="org.jasig.cas.web.RequestAccountController"
