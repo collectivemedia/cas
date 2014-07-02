@@ -34,7 +34,11 @@ import static org.junit.Assert.assertTrue;
  * @version $Revision: $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"/applicationContext.xml"})
+@ContextConfiguration({
+        "file:src/main/webapp/WEB-INF/cas-servlet.xml",
+        "file:src/main/webapp/WEB-INF/deployerConfigContext.xml",
+        "file:src/main/webapp/WEB-INF/spring-configuration/*.xml"
+})
 public class WiringTests {
     @Autowired
     private ApplicationContext applicationContext;
